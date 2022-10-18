@@ -35,7 +35,7 @@
 		var swiper = new Swiper('.swiper-slider', {
 			speed: 600,
 			autoplay: {
-				delay: 5000,
+				delay: 3000,
 			},
 			pagination: {
 				el: '.swiper-pagination',

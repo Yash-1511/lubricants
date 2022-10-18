@@ -51,6 +51,7 @@ theme.
 /* BODY */
 * {
   outline: none !important;
+  cursor: url('../images/oil.png'),auto !important;
 }
 
 body {
@@ -1060,7 +1061,8 @@ header .sound .equalizer .holder {
 }
 .navbar .left {
   width: 30%;
-  margin-left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .navbar .left a {
   position: relative;
@@ -1077,12 +1079,12 @@ header .sound .equalizer .holder {
   border-bottom: 2px solid #fff;
   text-decoration: none;
 }
-.navbar .logo {
+/* .navbar .logo {
   margin: 0 auto;
 }
 .navbar .logo a {
   float: left;
-}
+} */
 .navbar .logo a img {
   height: 56px;
 }
