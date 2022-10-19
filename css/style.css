@@ -1330,6 +1330,9 @@ header .sound .equalizer .holder {
   font-weight: 800;
   color: #e8293b;
   font-size: 10vw;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: yellow;
+  color: transparent;
   line-height: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container h1 span {
@@ -1338,7 +1341,7 @@ header .sound .equalizer .holder {
   margin-left: 4%;
   display: flex;
   -webkit-text-stroke-color: #fff;
-  color: transparent;
+  color: blue;
 }
 .swiper-slider .swiper-slide .slide-inner .container .slide-btn {
   float: left;
@@ -2719,7 +2722,7 @@ s .process span:before {
   }
 
   .navbar {
-    padding: 20px 30px;
+    padding: 20px 20px;
   }
 
   .navbar .right ul {
