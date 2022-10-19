@@ -63,8 +63,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 17px;
   color: #0e0e0e;
-}
 
+}
+*{
+  cursor: url("oil.png"),auto !important;
+  
+}
 /* CUSTOM HTML ELEMENTS */
 img {
   max-width: 100%;
@@ -139,7 +143,7 @@ section {
 }
 .pagination a:hover {
   text-decoration: none;
-  border-bottom: 2px solid #01f7b6;
+  border-bottom: 2px solid #0000ff;
 }
 
 /* PAGE LOADED */
@@ -180,7 +184,7 @@ section {
   bottom: 0;
   z-index: 11;
   overflow: hidden;
-  background: #01f7b6;
+  background: #0000ff;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -259,7 +263,7 @@ section {
   width: 2px;
   height: 22px;
   display: inline-block;
-  background: #01f7b6;
+  background: #0000ff;
   text-indent: -1000px;
   overflow: hidden;
 }
@@ -269,7 +273,7 @@ section {
   width: 100%;
   height: 0;
   position: fixed;
-  background: #01f7b6;
+  background: #0000ff;
   left: 0;
   bottom: 0;
   z-index: 15;
@@ -286,7 +290,7 @@ section {
   height: 0;
   position: absolute;
   bottom: 0;
-  background: #000;
+  background: yellow;
   z-index: 2;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -327,7 +331,7 @@ section {
 }
 
 .equalizer span {
-  background: #01f7b6;
+  background: #0000ff;
   width: 1px;
   height: 1px;
   top: 50%;
@@ -484,7 +488,7 @@ section {
 }
 .navigation-menu .inner .menu ul li a:hover {
   padding-bottom: 3px;
-  border-bottom: 5px solid #01f7b6;
+  border-bottom: 5px solid #0000ff;
   text-decoration: none;
 }
 .navigation-menu .inner .menu ul li ul {
@@ -507,7 +511,7 @@ section {
 .navigation-menu .inner .menu ul li ul li a:hover {
   padding: 0;
   border-bottom: none;
-  color: #01f7b6;
+  color: #0000ff;
 }
 .navigation-menu .inner .menu ul li ul li:hover ul {
   opacity: 1;
@@ -530,7 +534,7 @@ section {
   font-size: 2vw;
   font-family: "Fjalla One", sans-serif;
   text-transform: uppercase;
-  color: #01f7b6;
+  color: #0000ff;
   opacity: 0;
   transition-delay: 0.5s;
   transform: translateY(30px);
@@ -580,7 +584,7 @@ section {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #01f7b6;
+  background: #0000ff;
   z-index: 0;
 }
 .hamburger span:nth-child(1) {
@@ -613,7 +617,7 @@ section {
 }
 .hamburger span:after {
   z-index: 2;
-  background: #01f7b6;
+  background: #0000ff;
   transition: all 0.15s linear 0.3s;
 }
 .hamburger span:nth-child(2):before {
@@ -925,7 +929,7 @@ section {
 .page-header .container p {
   margin-bottom: 0;
   font-family: "Fjalla One", sans-serif;
-  color: #01f7b6;
+  color: #0000ff;
 }
 
 header {
@@ -1385,7 +1389,7 @@ header .sound .equalizer .holder {
   content: "";
   width: 22px;
   height: 1px;
-  background: #01f7b6;
+  background: #0000ff;
   position: absolute;
   top: 10px;
   right: 0;
@@ -1495,7 +1499,7 @@ header .sound .equalizer .holder {
   font-weight: 600;
   color: #fff;
   border-radius: 50%;
-  background: #01f7b6;
+  background: yellow;
   position: relative;
   border: 10px solid #e2fdf1;
   margin-top: 50px;
@@ -1579,12 +1583,12 @@ s .process span:before {
 .services-content-block small {
   display: inline-block;
   font-family: "Fjalla One", sans-serif;
-  color: #01f7b6;
+  color: #0000ff;
 }
 .services-content-block span {
   width: 50px;
   height: 1px;
-  background: #01f7b6;
+  background: #0000ff;
   display: inline-block;
   margin: 5px 15px;
 }
@@ -1710,7 +1714,7 @@ s .process span:before {
 .works .project-box .content-box .inner h3 span {
   display: block;
   font-size: 8vw;
-  color: #01f7b6;
+  color: #0000ff;
   margin-left: -7vw;
 }
 
@@ -1758,7 +1762,7 @@ s .process span:before {
   font-size: 60px;
   font-weight: 800;
   margin-top: 80px;
-  color: #01f7b6;
+  color: #0000ff;
   text-align: center;
   text-transform: uppercase;
   font-family: "Fjalla One", sans-serif;
@@ -1788,7 +1792,7 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 150px 0;
-  background: #01f7b6;
+  background: #0000ff;
   position: relative;
 }
 .team h6 {
@@ -1846,7 +1850,7 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 150px 0;
-  background: #01f7b6;
+  background: #f3ffc8;
   position: relative;
 }
 .work-with-us:before {
@@ -2124,7 +2128,7 @@ s .process span:before {
   color: #0e0e0e;
 }
 .news .post .post-content .inner .post-title a:hover {
-  color: #01f7b6;
+  color: #0000ff;
   text-decoration: none;
 }
 .news .post .post-content .inner .post-author {
@@ -2153,7 +2157,7 @@ s .process span:before {
   display: block;
   padding: 40px;
   margin-bottom: 40px;
-  background: #01f7b6;
+  background: #0000ff;
   font-family: "Fjalla One", sans-serif;
   position: relative;
 }
@@ -2275,7 +2279,7 @@ s .process span:before {
   font-size: 14px;
   font-weight: 600;
   color: #0e0e0e;
-  background: #01f7b6;
+  background: #0000ff;
   border: none;
 }
 
@@ -2393,7 +2397,7 @@ s .process span:before {
   font-size: 3vw;
   font-weight: 800;
   margin-bottom: 0;
-  color: #01f7b6;
+  color: #0000ff;
 }
 .footer .footer-contact {
   width: 100%;
@@ -2417,7 +2421,7 @@ s .process span:before {
   margin-bottom: 10px;
   font-family: "Fjalla One", sans-serif;
   text-transform: uppercase;
-  color: #01f7b6;
+  color: #0000ff;
 }
 .footer .footer-bottom ul {
   display: block;
