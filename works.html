@@ -42,8 +42,174 @@
   <link rel="stylesheet" href="css/fancybox.min.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/glightbox.min.css">
+  <link href="assets/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+
+  <style>
+    /*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+    .portfolio #portfolio-flters {
+      padding: 0;
+      margin: 0 auto 25px auto;
+      list-style: none;
+      text-align: center;
+      border-radius: 50px;
+    }
+
+    .portfolio #portfolio-flters li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 8px 18px 10px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      color: #444444;
+      margin: 0 3px 10px 3px;
+      transition: all ease-in-out 0.3s;
+      background: #fafafc;
+      border-radius: 50px;
+    }
+
+    .portfolio #portfolio-flters li:hover,
+    .portfolio #portfolio-flters li.filter-active {
+      color: #414c64;
+      background: #ffc107;
+    }
+
+    .portfolio #portfolio-flters li:last-child {
+      margin-right: 0;
+    }
+
+    .portfolio .portfolio-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .portfolio .portfolio-item img {
+      position: relative;
+      top: 0;
+      transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .portfolio .portfolio-item .portfolio-info {
+      opacity: 0;
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: -50px;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+      background: #ffc107;
+      padding: 15px 20px;
+    }
+
+    .portfolio .portfolio-item .portfolio-info h4 {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .portfolio .portfolio-item .portfolio-info p {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .portfolio .portfolio-item .portfolio-info .preview-link,
+    .portfolio .portfolio-item .portfolio-info .details-link {
+      position: absolute;
+      right: 50px;
+      font-size: 24px;
+      top: calc(50% - 18px);
+      color: rgba(255, 255, 255, 0.7);
+      transition: ease-in-out 0.3s;
+    }
+
+    .portfolio .portfolio-item .portfolio-info .preview-link:hover,
+    .portfolio .portfolio-item .portfolio-info .details-link:hover {
+      color: #fff;
+    }
+
+    .portfolio .portfolio-item .portfolio-info .details-link {
+      right: 15px;
+    }
+
+    .portfolio .portfolio-item:hover img {
+      top: -30px;
+    }
+
+    .portfolio .portfolio-item:hover .portfolio-info {
+      opacity: 1;
+      bottom: 0;
+    }
+
+    /*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+    .portfolio-details {
+      padding-top: 40px;
+    }
+
+    .portfolio-details .portfolio-details-slider img {
+      width: 100%;
+    }
+
+    .portfolio-details .portfolio-details-slider .swiper-pagination {
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      opacity: 1;
+      border: 1px solid #ffc107;
+    }
+
+    .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: #ffc107;
+    }
+
+    .portfolio-details .portfolio-info {
+      padding: 30px;
+      box-shadow: 0px 0 30px rgba(65, 76, 100, 0.08);
+    }
+
+    .portfolio-details .portfolio-info h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      font-size: 15px;
+    }
+
+    .portfolio-details .portfolio-info ul li+li {
+      margin-top: 10px;
+    }
+
+    .portfolio-details .portfolio-description {
+      padding-top: 30px;
+    }
+
+    .portfolio-details .portfolio-description h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-details .portfolio-description p {
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body class="page-loaded">
@@ -135,184 +301,144 @@
     <!-- end sound -->
   </header>
   <!-- end header -->
-  <section class="works">
+  <!-- ======= Portfolio Section ======= -->
+  <section class="hello">
     <div class="container">
       <div class="row">
-        <div class="col-12 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="col-12 wow fadeIn" style="visibility: visible; animation-name: fadeIn">
           <h6>SMOOTH INTERFACE INTERACTION</h6>
-          <h2 data-text="Works">Our selected showcases and portfolios </h2>
+          <h2 data-text="Hellow">See our wide range of products!!</h2>
         </div>
-        <!-- end col-12 -->
-        <div class="col-12">
-          <div class="project-box wow fadeIn" data-bg="#faf8ed" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/featured01.jpg" data-fancybox=""><img src="images/featured01.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Karamel</span>Coffee</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#ece6f4" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/featured02.jpg" data-fancybox=""><img src="images/featured02.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Female</span>Purples</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#ebf8f3" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/featured03.jpg" data-fancybox=""><img src="images/featured03.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Redness</span>Socks</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#f4eedf" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/works04.jpg" data-fancybox=""><img src="images/works04.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Hairling</span>Glass</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#e5f2f7" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/works05.jpg" data-fancybox=""><img src="images/works05.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Bebishka</span>Babies</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#f5efe8" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/works06.jpg" data-fancybox=""><img src="images/works06.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Cleaning</span>Bathys</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#dbe3f1" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/works07.jpg" data-fancybox=""><img src="images/works07.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Relaxing</span>Bluesis</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#e8d7f1" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/works08.jpg" data-fancybox=""><img src="images/works08.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Speculos</span>Cookies</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-          <div class="project-box wow fadeIn" data-bg="#f1dad6" style="visibility: visible; animation-name: fadeIn;">
-            <figure> <a href="images/works09.jpg" data-fancybox=""><img src="images/works09.jpg" alt="Image"></a>
-            </figure>
-            <div class="content-box">
-              <div class="inner"> <small>AMAZING USER INTERFACE &amp; SMOOTH INTERACTION</small>
-                <h3><span>Clonney</span>Colors</h3>
-                <div class="custom-link"> <a href="works-single.html">
-                    <div class="lines"> <span></span> <span></span> </div>
-                    <!-- end lines -->
-                    <b>LEARN MORE</b>
-                  </a> </div>
-                <!-- end custom-link -->
-              </div>
-              <!-- end inner -->
-            </div>
-            <!-- end content-box -->
-          </div>
-          <!-- end project-box -->
-        </div>
-        <!-- end col-12 -->
       </div>
-      <!-- end row -->
     </div>
-    <!-- end container -->
   </section>
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>App 1</h4>
+            <p>App</p>
+            <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Web 3</h4>
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>App 2</h4>
+            <p>App</p>
+            <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Card 2</h4>
+            <p>Card</p>
+            <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Web 2</h4>
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>App 3</h4>
+            <p>App</p>
+            <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Card 1</h4>
+            <p>Card</p>
+            <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Card 3</h4>
+            <p>Card</p>
+            <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Web 3</h4>
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+              class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
   <!-- end works -->
   <footer class="footer">
     <div class="footer-quote wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
@@ -383,6 +509,8 @@
   <!-- JS FILES -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/glightbox.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/tilt.jquery.js"></script>
   <script src="js/wow.min.js"></script>
@@ -390,7 +518,13 @@
   <script src="js/jquery.typewriter.js"></script>
   <script src="js/fancybox.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/purecounter_vanilla.js"></script>
   <script src="js/scripts.js"></script>
+
+  <script>
+
+  </script>
+
 
 </body>
 
