@@ -150,7 +150,7 @@
     });
 
     // PAGE TRANSITION
-    $("body a").on("click", function (e) {
+    $("body a.data").on("click", function (e) {
       if (typeof $(this).data("fancybox") == "undefined") {
         e.preventDefault();
         var url = this.getAttribute("href");
@@ -171,7 +171,7 @@
               "transition-delay",
               "0.3s"
             );
-
+            
             $("html, body").animate(
               {
                 scrollTop: $(hash).offset().top,
